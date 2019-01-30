@@ -1,0 +1,148 @@
+export AWS_ACCESS_KEY_ID=AKIAIRVVAZD6BRHZP75Q
+export AWS_SECRET_ACCESS_KEY=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
+
+
+ssh -i test-key.pem ubuntu@34.222.157.218
+
+
+scp -i test-key.pem aws_sdk/src/main/scala/AwsS3Integration.scala ubuntu@34.222.157.218:/home/ubuntu/aws_sdk/src/main/scala/AwsS3Integration.scala
+
+
+
+install sbt 
+echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+sudo apt-get update
+sudo apt-get install sbt
+	
+
+
+install java
+sudo apt-get install default-jdk
+
+policy
+"{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"Stmt1\",\"Effect\":\"Allow\",\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::ayushi-test/testing\"}]}"
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+Trust Policy
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::147496183601:role/test-role"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::147496183601:user/test-user"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+
+
+trust policy
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::147496183601:user/test-user"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+
+David's Policy
+{
+ "Version":"2012-10-17",
+ "Statement": [
+   {
+     "Sid": "AllowUserToSeeBucketListInTheConsole",
+     "Action": ["s3:ListAllMyBuckets", "s3:GetBucketLocation"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::*"]
+   },
+  {
+     "Sid": "AllowRootAndHomeListingOfBucket",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::ayushi-test"],
+     "Condition":{"StringEquals":{"s3:prefix":["","ayu_album/"],"s3:delimiter":["/"]}}
+    },
+   {
+     "Sid": "AllowListingOfUserFolder",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::my-company"],
+     "Condition":{"StringLike":{"s3:prefix":["ayu_album/*"]}}
+   },
+   {
+     "Sid": "AllowAllS3ActionsInUserFolder",
+     "Effect": "Deny",
+     "Action": ["s3:DeleteObject"],
+     "Resource": ["arn:aws:s3:::my-company/ayu_album/*"]
+   }
+ ]
+}
+
+
+Summary :-
+1.For Every Request temporary access credentials will be valid for 12 Hours.
+2.We will be generating new credentials every time user makes a request to our API.In case he has already made a request earlier in 12 hours duration,new set of token would be generated and previous ones will not be reused.
+
+export AWS_ACCESS_KEY_ID=AKIAJAK7NOOYRMBPV2KA
+export AWS_SECRET_ACCESS_KEY=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
+
+
+
+
+
+
+
+

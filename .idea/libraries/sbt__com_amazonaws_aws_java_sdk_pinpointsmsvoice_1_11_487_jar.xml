@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.amazonaws:aws-java-sdk-pinpointsmsvoice:1.11.487:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.amazonaws/aws-java-sdk-pinpointsmsvoice/jars/aws-java-sdk-pinpointsmsvoice-1.11.487.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.amazonaws/aws-java-sdk-pinpointsmsvoice/srcs/aws-java-sdk-pinpointsmsvoice-1.11.487-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
