@@ -1,9 +1,15 @@
 [0m[[0m[0minfo[0m] [0m[0mPackaging /home/knoldus/Downloads/aws_sdk/target/scala-2.12/aws_sdk_2.12-0.1.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	AwsS3Integration$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/AwsS3Integration$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	AwsS3Integration.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/AwsS3Integration.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FederationApproach.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/FederationApproach.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	AwsS3Integration$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/AwsS3Integration$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AwsS3Integration.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/AwsS3Integration.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FederationApproach$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/FederationApproach$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AwsS3Integration$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/AwsS3Integration$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FederationApproach$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/knoldus/Downloads/aws_sdk/target/scala-2.12/classes/FederationApproach$delayedInit$body.class[0m
 [0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

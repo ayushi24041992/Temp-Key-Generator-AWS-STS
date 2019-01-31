@@ -4,7 +4,7 @@
 		module="aws_sdk_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20190130144245"
+		publication="20190131143740"
 	>
 		<description>
 		aws_sdk

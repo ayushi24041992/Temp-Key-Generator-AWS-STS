@@ -1,5 +1,6 @@
 import com.amazonaws.auth.{AWSStaticCredentialsProvider, BasicSessionCredentials}
 import com.amazonaws.regions.Regions
+import com.amazonaws.services.connect.model.GetFederationTokenRequest
 import com.amazonaws.services.identitymanagement.model._
 import com.amazonaws.services.identitymanagement.{AmazonIdentityManagement, AmazonIdentityManagementClientBuilder}
 import com.amazonaws.services.s3.AmazonS3ClientBuilder
@@ -13,6 +14,7 @@ object AwsS3Integration extends App {
 
   def generateSts(role: Role, userName: String) : Credentials = {
     val client: AWSSecurityTokenService = AWSSecurityTokenServiceClientBuilder.standard().withRegion(Regions.US_WEST_2).build()
+
 
     val policy: String =
       s"""{
